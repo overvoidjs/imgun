@@ -12,5 +12,11 @@
     "minimum-stability": "dev",
     "require": {
       "overvoidjs/imgun": "dev-master"
+    },
+    "autoload": {
+        "classmap": ["imgun.php"],
+        "psr-0": {
+            "Overvoidjs": "namespaced/"
+        }
     }
 }
