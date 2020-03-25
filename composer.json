@@ -9,5 +9,6 @@
             "email": "loisoj@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
