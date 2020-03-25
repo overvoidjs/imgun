@@ -11,6 +11,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-      "overvoidjs/imgun": "dev-master",
+      "overvoidjs/imgun": "dev-master"
     }
 }
