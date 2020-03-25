@@ -1,0 +1,13 @@
+{
+    "name": "overvoidjs/imgun",
+    "description": "Class to work with some img from PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Overvoidjs",
+            "email": "loisoj@gmail.com"
+        }
+    ],
+    "require": {}
+}
