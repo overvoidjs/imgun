@@ -10,6 +10,7 @@ Class imgun
       {
           // Открываем файл
           $this->image = $this->openImage($fileName);
+          $this->filename = $fileName;
 
           //Получаем ширину и высоту
           $this->width  = imagesx($this->image);
@@ -37,6 +38,21 @@ Class imgun
                   break;
           }
           return $img;
+      }
+
+
+      //Получить информацию об изображении
+      public function get_img_info(){
+        $tmp_arr = getimagesize($this->filename);
+
+        $arrToAnswer = [
+          'width'=>$tmp_arr[0],
+          'height'=>$tmp_arr[1],
+          'mime'=>$tmp_arr['mime'],
+          'size'=>filesize($this->filename),
+        ];
+
+        return $arrToAnswer;
       }
 
       //Меняем размер изображения
@@ -205,4 +221,3 @@ Class imgun
             }
 
 }
-
