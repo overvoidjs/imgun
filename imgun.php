@@ -62,6 +62,7 @@ Class imgun
             $optimalWidth  = $optionArray['optimalWidth'];
             $optimalHeight = $optionArray['optimalHeight'];
             $this->imageResized = imagecreatetruecolor($optimalWidth, $optimalHeight);
+            imagesavealpha($this->imageResized, true);
             imagecopyresampled($this->imageResized, $this->image, 0, 0, 0, 0, $optimalWidth, $optimalHeight, $this->width, $this->height);
             if ($option == 'crop') { $this->crop($optimalWidth, $optimalHeight, $newWidth, $newHeight); }
         }
