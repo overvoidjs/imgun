@@ -62,6 +62,7 @@ Class imgun
             $optimalWidth  = $optionArray['optimalWidth'];
             $optimalHeight = $optionArray['optimalHeight'];
             $this->imageResized = imagecreatetruecolor($optimalWidth, $optimalHeight);
+            imagealphablending($this->imageResized, false);
             imagesavealpha($this->imageResized, true);
             imagecopyresampled($this->imageResized, $this->image, 0, 0, 0, 0, $optimalWidth, $optimalHeight, $this->width, $this->height);
             if ($option == 'crop') { $this->crop($optimalWidth, $optimalHeight, $newWidth, $newHeight); }
@@ -176,6 +177,8 @@ Class imgun
 
               //Обрезаем от центра до заданного размера
               $this->imageResized = imagecreatetruecolor($newWidth , $newHeight);
+              imagealphablending($this->imageResized, false);
+              imagesavealpha($this->imageResized, true);
               imagecopyresampled($this->imageResized, $crop , 0, 0, $cropStartX, $cropStartY, $newWidth, $newHeight , $newWidth, $newHeight);
           }
 
